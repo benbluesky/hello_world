@@ -76,7 +76,7 @@ Git官方网站上安装步骤[网址](http://git-scm.com/download/linux)
 ### 获取帮助
 
 * Git 命令帮助的获取方法
-    * `git help <verb>`    
+    * `git help <verb>`
     * `git <verb> --help`
     * `man git-<verb>`
 * Freenode IRC 服务器（irc.freenode.net）的 `#git` 或`#github`频道寻求帮助
@@ -88,7 +88,7 @@ Git官方网站上安装步骤[网址](http://git-scm.com/download/linux)
 
 ## Git 基础
 
-> **本章是学习Git最重要的一张，涵盖了完成工作的各种基本命令。**
+> **本章是学习Git最重要的一章，涵盖了完成工作的各种基本命令。**
 >* 初始化一个**仓库（repository）**
 >* 开始或停止**跟踪（track）文件**
 >* **暂存（stage）**或者**提交（commit）更改**
@@ -97,3 +97,96 @@ Git官方网站上安装步骤[网址](http://git-scm.com/download/linux)
 >* 如何浏览你的项目的历史版本以及不同**提交（commits）间的差异**
 >* 如何向你的y远程仓库**推送（push）文件**
 >* 如何从你的远程仓库**拉取（pull）文件**
+
+### 获取Git仓库
+
+#### 在现有目录中初始化仓库
+
+`git init`<br />
+`git add filename.file 类型`<br />
+`git add LICENSE`<br />
+`git commit -m 'initial project version'`<br />
+
+#### 克隆现有仓库
+ `git clone` *git 克隆的是git 仓库服务器上的几乎所有数据，而不仅仅是复制完成工作所需要的文件。*<br />
+ *当你执行`git clone`命令的时候，默认配置下远程仓库中的每一个文件的每一个版本都将被拉取下来。*
+
+ `git clone [url]`<br />
+ `git clone https://github.com/libgit2/ligbit2` <br />
+ `git clone https://github.com/libgit2/ligbit2 mylibgit`
+
+ > **Git 支持多种数据传输协议： https:// 或者git:// 或者SSH**
+
+ ### 记录每次更新到仓库
+
+ git文件状态变化周期：**未跟踪——>未修改——>已修改——>已暂存**
+
+ #### 检查当前文件状态
+
+`git status`<br />
+`on branch master`<br/>
+`nothing to commit, workding directory clean`
+
+`echo 'My Project' >README`
+
+*不懂`echo`什么意思*
+
+`git status`
+
+#### 跟踪新文件
+
+`git add`
+
+`git status`
+
+#### 暂存已修改文件
+
+`git status`
+
+`vim contributing.md`
+
+`git status`
+
+`git add`
+
+#### 状态简览
+
+`git status -s`
+
+`git status --short`
+
+#### 忽略文件
+
+`cat.gitignore`
+
+`*.[oa]`
+
+`*~`
+
+> 文件 .gitignore 的格式规范如下：
+>* 所有空行或者以 ＃ 开头的行都会被 Git 忽略。
+>* 可以使用标准的 glob 模式匹配。
+>* 匹配模式可以以（/）开头防止递归。
+>* 匹配模式可以以（/）结尾指定目录。
+>* 要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。
+
+```
+# no .a files
+*.a
+
+# but do track lib.a, even though you're ignoring .a files above
+!lib.a
+
+# only ignore the TODO file in the current directory, not subdir/TODO
+/TODO
+
+# ignore all files in the build/ directory
+build/
+
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+
+# ignore all .pdf files in the doc/ directory
+doc/**/*.pdf
+```
+`git diff` ——查看具体修改了什么内容
