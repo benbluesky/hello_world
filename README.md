@@ -13,3 +13,7 @@ https://github.com/uwescience/datasci_course_materials
 - Topics: Python NLP on Twitter API, Distributed Computing Paradigm, MapReduce/Hadoop & Pig Script, SQL/NoSQL, Relational Algebra, Experiment design, Statistics, Graphs, Amazon EC2, Visualization.
 
 2. Data Science / Harvard
+
+-------------------------------------------
+
+了解到关于深度学习的一个开源中文翻译：https://exacity.github.io/deeplearningbook-chinese/Chapter1_introduction/
