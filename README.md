@@ -17,3 +17,6 @@ https://github.com/uwescience/datasci_course_materials
 -------------------------------------------
 
 了解到关于深度学习的一个开源中文翻译：https://exacity.github.io/deeplearningbook-chinese/Chapter1_introduction/
+
+------------------------------------------
+动手学深度学习：http://zh.d2l.ai/
