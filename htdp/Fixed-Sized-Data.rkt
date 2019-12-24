@@ -2,7 +2,7 @@
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname Fixed-Sized-Data) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 (require 2htdp/image)
-;Arithmetic
+;1 Arithmetic
 (sin 0)
 (/ 4 6)
 (sqrt  2)
@@ -10,7 +10,9 @@
 (define y 4)
 (define (z x y)
   (sqrt (+ (expt x 2) (expt y 2))))
-;The Arithmetic of Strings
+;1.1 The Arithmetic of Numbers
+
+;1.2 The Arithmetic of Strings
 (define prefix "hello")
 (define suffix "world")
 (define (expression prefix suffix)
@@ -23,6 +25,14 @@
                (string-ith str 9) )
 
 (substring "helloworld" 0 2)
+
+
+
+;1.3 Mixing It Up
+
+(number->string 42)
+
+;1.4 The Arithmetic of Images
 
 
 
