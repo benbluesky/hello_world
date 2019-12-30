@@ -43,27 +43,3 @@
 (define (f-c f)
   (* (- f 32) 5/9))
 
-;exercise 2.2.2
-
-(define (dollar->euro dollar)
-  (* 1.2 dollar))
-
-;exercise 2.2.3
-(define (trangle l h)
-  (* 1/2 l h))
-;exercise 2.2.4
-(define (convert3 a b c)
-  (+ a (* b 10) (* c 100)))
-;exercise 2.2.5
-(define (f n)
-  (+ 10 (* n n)))
-
-
-
-
-
-
-
-
-
-
