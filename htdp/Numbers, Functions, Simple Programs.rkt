@@ -58,7 +58,28 @@
 (define (f n)
   (+ 10 (* n n)))
 
+(define (f1 n1)
+  (+ 20 (* 1/2  n1 n1)))
 
+(define (f2 n2)
+  (- 2 (/ 1 n2)))
+
+; Word Problems
+(define (wage h)
+  (* 12 h))
+
+;exercise 2.3.1
+(define (tax wage)
+  (* 0.15 wage))
+
+(define (netpay h)
+  (- (wage h)
+     (tax (wage h))))
+
+;this exercise is interesting, you need to use (wage h) represent a variable, or appling a function. so (wage h)
+;is both a fuction and a variable of another fucntion.
+
+;exercise 2.3.2
 
 
 
