@@ -1,6 +1,11 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname |Numbers, Functions, Simple Programs|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+;Section 2
+
+;Numbers, Expressions, Simple Programs
+
+
 ;2.1 Numbers and Arithemic
 (+ 5 5)
 (+ -5 5)
@@ -64,7 +69,7 @@
 (define (f2 n2)
   (- 2 (/ 1 n2)))
 
-; Word Problems
+;2.3 Word Problems
 (define (wage h)
   (* 12 h))
 
@@ -80,9 +85,36 @@
 ;is both a fuction and a variable of another fucntion.
 
 ;exercise 2.3.2
+(define (sum-coins p n d q)
+  (+ p (* 5 n) (* 10 d) (* 25 q)))
 
+;exercise 2.3.3
+(define (total-profit attendees)
+  (- (* 5 attendees)
+     (+ 20 (* 0.5 attendees))))
 
+;2.4 Errors
+(define (ff n)
+  (+ (/ n 3) 2))
+;the exercises need not to be done
 
+;(define (somef x)
+;  (sin x x))
+
+;2.5 Designing Programs
+
+;;----------------------Design recipe------------------------------------
+;;Contract:
+;;Purpose:
+;;Example:
+;;Definition:
+;;Tests:
+;;Expected values
+;;---------------------The disign recipe: A complete example----------------
+
+#|this is a 
+multi-line
+block comment|#
 
 
 
