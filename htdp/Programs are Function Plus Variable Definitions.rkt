@@ -55,6 +55,19 @@
 ; 1 rod = 11/2yard
 ; 1 furlong = 40 rod
 ; 1 mile = 8 furlong
+(define (inches->cm in)
+  (* 2.54 in))
+(define (feet->inches ft)
+  (* 12 ft))
+(define (yards->feet yd)
+  (* 3 yd))
+(define (rods->yards rd)
+  (* 11/2 rd))
+(define (furlongs->rods fl)
+  (* 40 fl))
+(define (miles->furlongs ml)
+  (* 8 ml))
+;need to define constants,but I did not, it's not good.
 
 
         
