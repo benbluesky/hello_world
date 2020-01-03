@@ -49,5 +49,12 @@
 ;Give names to frequently used constants and use the names instead of the constants in programs.
 
 ;3.3 Finger Exercise on Composing Functions
+; 1 inch = 2.54 cm
+; 1 foot = 12 inch
+; 1 yard = 3 foot
+; 1 rod = 11/2yard
+; 1 furlong = 40 rod
+; 1 mile = 8 furlong
+
 
         
