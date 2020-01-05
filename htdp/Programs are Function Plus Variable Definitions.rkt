@@ -68,6 +68,16 @@
 (define (miles->furlongs ml)
   (* 8 ml))
 ;need to define constants,but I did not, it's not good.
+(define (feet->cm ft)
+  (* 12 2.54 ft))
+(define (yard->cm yd)
+  (* 3 12 2.54 yd))
+(define (rods->inches rd)
+  (* 11/2 3 12 rd))
+(define (miles-> feet ml)
+  (* 8 40 11/2 3 ml))
+;--the solution of the above is not good, there are a good way to define those functions.
+
 
 
         
