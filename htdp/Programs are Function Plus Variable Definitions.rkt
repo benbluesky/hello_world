@@ -79,7 +79,80 @@
 ;--the solution of the above is not good, there are a good way to define those functions.
 
 ;exercise 3.3.1
+(define cm-per-inch 2.54)
+(define in-per-foot 12)
+(define ft-per-yard 3)
+(define yd-per-rod 5.5)
+(define rd-per-furlong 40)
+(define fl-per-mile 8)
 
+(define (inches->cm in)
+  (* cm-per-inch in))
+
+(define (feet->inches feet)
+  (* in-per-foot feet))
+
+(define (yards->feet yards)
+  (* ft-per-yard yards))
+
+(define (rods->yards rods)
+  (* yd-per-rod rods))
+
+(define (furlongs->rods furlongs)
+  (* rd-per-furlong furlongs))
+
+(define (miles->furlongs miles)
+  (* fl-per-mile miles))
+
+(define (feet->cm feet)
+  (inches->cm (feet->inches feet)))
+
+(define (yards->cm yards)
+  (feet->cm (yards->feet yards)))
+
+(define (rods->inches rods)
+  (feet->inches (yards->feet (rods->yards rods))))
+
+(define (miles->feet miles)
+  (yards->feet
+   (rods->yards
+    (furlongs->rods
+     (miles->furlongs
+      miles)))))
+
+;exercise 3.3.2
+(define (volume-cylinder radius height)
+  (* (area-of-base-disk radius)  height))
+(define (area-of-base-disk radius)
+  (* radius radius pi))
+;exercise 3.3.3
+(define (area-cylinder radius height)
+  (+ (area-side radius height)(* 2(area-disk radius))))
+(define (area-side radius height)
+  (* 2 pi radius height))
+(define (area-disk radius)
+  (* pi radius radius))
+
+;exercise 3.3.4
+(define (area-pipe radius length thickness)
+  (+ (area-innerside radius length)
+     (area-outerside radius length thickness)
+     (* 2 (- (area-outer-disk radius thickness)
+             (area-innerhole radius)))))
+
+(define (area-outer-disk radius thickness)
+  (* pi (+ radius thickness)(+ radius thickness)));stupid
+(define (area-innerhole radius)
+  (* pi radius radius))
+(define (area-outerside radius length thickness)
+  (* 2 pi length (+ radius thickness)))
+(define (area-innerside radius length)
+  (* 2 pi length radius))
+
+;exercise 3.3.5
+
+
+   
 
 
         
